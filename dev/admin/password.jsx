@@ -4,7 +4,7 @@ const nav = require('./common.jsx');
 ReactDOM.render(
     <nav.AppNav>
         <div className="des">
-            <h1>heading</h1>
+            <h1>修改密码</h1>
         </div>
     </nav.AppNav>
     , document.querySelector('#page'));

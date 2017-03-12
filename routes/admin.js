@@ -21,36 +21,46 @@ router.get('/', (req, res) => {
     res.sendFile(path.resolve('./views/admin/welcome.html'))
 })
 
+
 //2管理员管理
+//信息
 router.get('/manage', (req, res) => {
     res.sendFile(path.resolve('./views/admin/manage.html'))
 })
+//修改密码
+router.get('/manage/password', (req, res) => {
+    res.sendFile(path.resolve('./views/admin/password.html'))
+})
+
 //3标题管理
-router.get('/heading', (req, res) => {
+router.get('/culture', (req, res) => {
     res.sendFile(path.resolve('./views/admin/heading.html'))
 })
-//4文章管理
-router.get('/essay', (req, res) => {
+router.get('/culture/eassy', (req, res) => {
     res.sendFile(path.resolve('./views/admin/essay.html'))
 })
+
 //5剪纸管理
 router.get('/paperCut', (req, res) => {
     res.sendFile(path.resolve('./views/admin/paperCut.html'))
 })
+
 //6视频管理
-router.get('/video', (req, res) => {
+router.get('/tour', (req, res) => {
     res.sendFile(path.resolve('./views/admin/video.html'))
 })
 //7产品管理
-router.get('/products', (req, res) => {
+router.get('/tour/products', (req, res) => {
     res.sendFile(path.resolve('./views/admin/products.html'))
 })
+
+
 //8留言管理
-router.get('/message', (req, res) => {
+router.get('/contact', (req, res) => {
     res.sendFile(path.resolve('./views/admin/message.html'))
 })
 //9地址管理
-router.get('/location', (req, res) => {
+router.get('/contact/location', (req, res) => {
     res.sendFile(path.resolve('./views/admin/location.html'))
 })
 
