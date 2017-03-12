@@ -31,6 +31,7 @@ class NormalLoginForm extends React.Component {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
+
                     body: JSON.stringify(values)
                 }).then((res) => res.json()).then((data) => {
                     if (data == "ok") {

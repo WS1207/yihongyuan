@@ -6,15 +6,15 @@ class WangEditor extends React.Component {
         super(props)
     }
     componentDidMount() {
-        this.eidtor=new wangEditor(this.e);
-        this.eidtor.config.uploadImgUrl=this.props.url;
-        this.eidtor.config.menus=$.map(wangEditor.config.menus,function (item,key) {
+        this.editor=new wangEditor(this.e);
+        this.editor.config.uploadImgUrl=this.props.url;
+        this.editor.config.menus=$.map(wangEditor.config.menus,function (item,key) {
             if(item==='location'){
                 return null;
             }
             return item;
         });
-        this.eidtor.create();
+        this.editor.create();
         if(this.props.content){
             this.editor.$txt.html(this.props.content)
         }

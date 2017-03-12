@@ -163,7 +163,6 @@ ReactDOM.render(
     <nav.AppNav>
         <div className="des">
             <Rows/>
-            <o.WangEditor url={'/admin/txt/'} save={aa} content={'<h1>aaaaaa</h1>'}/>
         </div>
     </nav.AppNav>
     , document.querySelector('#page'));
