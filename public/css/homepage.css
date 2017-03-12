@@ -1,0 +1,71 @@
+@import url(public.css);
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf"); }
+
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf"); }
+
+#xm_show {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto; }
+
+.xm_title {
+  text-align: center;
+  margin: 73px auto; }
+
+.xm_content {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .xm_content li {
+    width: 25%;
+    height: 600px;
+    float: left;
+    position: relative;
+    cursor: pointer; }
+    .xm_content li:hover .xm_people {
+      transform: scale(1.35); }
+    .xm_content li:hover .xm_xd {
+      display: none; }
+    .xm_content li:hover .xm_xb {
+      opacity: 1; }
+    .xm_content li:hover .xm_xz {
+      left: 130px;
+      top: 350px; }
+    .xm_content li:hover .xm_xj {
+      opacity: 1; }
+    .xm_content li .xm_people {
+      width: 222px;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xd {
+      position: absolute;
+      top: 327px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xz {
+      position: absolute;
+      top: 234px;
+      left: 180px;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xb {
+      position: absolute;
+      top: 0px;
+      left: 78px;
+      transition: all 0.8s ease;
+      opacity: 0; }
+    .xm_content li .xm_xj {
+      position: absolute;
+      top: 510px;
+      left: 158px;
+      transition: all 0.8s ease;
+      opacity: 0; }

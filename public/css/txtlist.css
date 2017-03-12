@@ -1,0 +1,62 @@
+@import url(public.css);
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf"); }
+
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf"); }
+
+.xm_txt {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 111px;
+  box-sizing: border-box; }
+  .xm_txt .xm_tlist {
+    width: 286px;
+    height: 480px;
+    float: left;
+    margin: 0 20px;
+    text-align: center; }
+    .xm_txt .xm_tlist:hover {
+      background: url("../images/xlist1.png") no-repeat; }
+    .xm_txt .xm_tlist img {
+      margin-top: 42px; }
+    .xm_txt .xm_tlist .xm_listcon {
+      width: 240px;
+      height: 88px;
+      margin: 20px auto 0; }
+      .xm_txt .xm_tlist .xm_listcon .ltitle {
+        width: 100%;
+        text-align: left;
+        font-size: 20px; }
+        .xm_txt .xm_tlist .xm_listcon .ltitle span {
+          text-align: right;
+          font-weight: lighter;
+          float: right;
+          color: #cfcfcf; }
+      .xm_txt .xm_tlist .xm_listcon p {
+        width: 100%;
+        height: 20px;
+        overflow: hidden;
+        text-align: left; }
+      .xm_txt .xm_tlist .xm_listcon .show {
+        width: 100%;
+        height: 12px;
+        margin-top: 20px; }
+        .xm_txt .xm_tlist .xm_listcon .show li {
+          float: left; }
+          .xm_txt .xm_tlist .xm_listcon .show li .dian {
+            text-align: left;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc; }
+          .xm_txt .xm_tlist .xm_listcon .show li .peope {
+            display: inline-block;
+            font-size: 12px;
+            color: #ccc; }
+          .xm_txt .xm_tlist .xm_listcon .show li .dian2 {
+            margin-left: 22px; }

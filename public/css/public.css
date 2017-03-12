@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'PingFang Medium';
+    src: url('../fonts/PingFang Medium.ttf');
+}
+@font-face {
+    font-family: 'PingFang Bold';
+    src: url('../fonts/PingFang Bold.ttf');
+}
+@font-face {
+    font-family: 'PingFang Regular';
+    src: url('../fonts/PingFang Regular.ttf');
+}
+@font-face {
+    font-family: 'sanfan Bold';
+    src: url('../fonts/System San Francisco Display Bold.ttf');
+}
+@font-face {
+    font-family: 'sanfan';
+    src: url('../fonts/System San Francisco Display Regular.ttf');
+}
+body, p, h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dt, dd, input, form {
+    margin: 0;
+    padding: 0;
+    list-style: none; /*清除列表前面的圆点*/
+    font-family: 'PingFang Regular','sanfan',SansSerif;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}

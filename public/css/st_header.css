@@ -1,0 +1,61 @@
+@import url(public.css);
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf"); }
+
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf"); }
+
+.st_navbarbox {
+  width: 100%;
+  height: 88px;
+  background: #eee; }
+  .st_navbarbox .st_navbar {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; }
+    .st_navbarbox .st_navbar .st_logo {
+      float: left;
+      margin-top: 20px; }
+    .st_navbarbox .st_navbar .st_navtitlebox {
+      width: 960px;
+      height: 100%;
+      float: right;
+      line-height: 88px;
+      position: relative; }
+
+.st_navtitle {
+  height: 100%;
+  float: left;
+  margin-left: 50px;
+  box-sizing: border-box; }
+  .st_navtitle .st_home {
+    display: none; }
+  .st_navtitle:hover .st_border {
+    display: block;
+    margin-left: -5px; }
+  .st_navtitle .st_border {
+    width: auto;
+    height: 12px;
+    position: absolute;
+    margin-top: 57px;
+    margin-left: -77px;
+    display: none; }
+  .st_navtitle .st_titles {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 18px; }
+
+.active .st_border {
+  display: block;
+  margin-left: -5px; }
+
+.actives .st_home {
+  margin-left: -18px;
+  width: auto;
+  height: 12px;
+  display: block;
+  position: absolute;
+  margin-top: 57px; }

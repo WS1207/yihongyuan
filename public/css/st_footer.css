@@ -1,0 +1,52 @@
+@import url(public.css);
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf"); }
+
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf"); }
+
+.st_bottombox {
+  width: 100%;
+  background: #0d0d0d; }
+  .st_bottombox .st_bottom {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; }
+    .st_bottombox .st_bottom .st_bignav {
+      padding: 57px 135px 60px 135px; }
+      .st_bottombox .st_bottom .st_bignav .st_message {
+        width: 930px;
+        height: 29px;
+        color: #b2b2b2;
+        font-size: 16px;
+        font-family: 'PingFang Regular';
+        margin-bottom: 32px; }
+        .st_bottombox .st_bottom .st_bignav .st_message li {
+          width: auto;
+          height: 100%;
+          float: left; }
+          .st_bottombox .st_bottom .st_bignav .st_message li p {
+            display: inline-block;
+            height: 29px;
+            float: right;
+            line-height: 29px;
+            padding-left: 12px; }
+          .st_bottombox .st_bottom .st_bignav .st_message li .st_int {
+            padding-right: 80px; }
+        .st_bottombox .st_bottom .st_bignav .st_message li.st_phone {
+          float: right; }
+
+.st_map {
+  width: 930px;
+  height: 223px;
+  background: url(../images/st_footmap.png); }
+
+.st_copyright {
+  padding-top: 35px; }
+  .st_copyright p {
+    color: #4c4c4c;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'sanfan'; }

@@ -1,0 +1,364 @@
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf");
+}
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf");
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\000033}}
+.banner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\000037}}
+.banner .img {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  background: url("../images/w1.png") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000322}}
+.btn {
+  width: 1200px;
+  height: 22px;
+  background: #fff;
+  margin: auto;
+  margin-top: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000328}}
+.btn ul {
+  width: 1200px;
+  height: 22px;
+  line-height: 22px;
+  margin-left: -10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000333}}
+.btn ul .a {
+  float: left;
+  min-width: 40px;
+  height: 22px;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000340}}
+.btn ul .a .gt {
+  width: 15px;
+  height: 15px;
+  vertical-align: text-top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000346}}
+.btn ul .a .b {
+  width: 15px;
+  height: 15px;
+  vertical-align: text-top;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000358}}
+.my_xiangbox {
+  width: 100%;
+  margin-bottom: 100px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000361}}
+.my_xiangbox .xiang {
+  width: 1200px;
+  height: 1245px;
+  margin: 0 auto;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000366}}
+.my_xiangbox .xiang .zi {
+  width: 423px;
+  height: 130px;
+  position: absolute;
+  left: 0;
+  top: 143px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000372}}
+.my_xiangbox .xiang .zi h1 {
+  font-size: 20px;
+  color: #1e1e1e;
+  font-family: "PingFang Regular";
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000379}}
+.my_xiangbox .xiang .tu {
+  width: 300px;
+  height: 440px;
+  position: absolute;
+  right: 62px;
+  top: 0;
+  z-index: 2;
+  background-size: contain;
+  background: url(../images/contact/my_xiang_003.png) no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000389}}
+.my_xiangbox .xiang .zuo {
+  width: 604px;
+  height: 247px;
+  position: absolute;
+  left: -35px;
+  top: 344px;
+  background: url(../images/contact/my_xiang_06.png) no-repeat;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\0000398}}
+.my_xiangbox .xiang .zhongzi {
+  width: 625px;
+  height: 79px;
+  position: absolute;
+  top: 600px;
+  left: 65px;
+  background-size: contain;
+  background: url(../images/contact/my_xiang_03_03.png) no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003107}}
+.my_xiangbox .xiang .you {
+  width: 684px;
+  height: 320px;
+  position: absolute;
+  right: -38px;
+  top: 428px;
+  z-index: 1;
+  background: url(../images/contact/my_xiang_03.png) no-repeat;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003116}}
+.my_xiangbox .xiang .you .shang {
+  width: 280px;
+  height: 38px;
+  position: absolute;
+  top: 50px;
+  left: 226px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003122}}
+.my_xiangbox .xiang .you .shang h1 {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'PingFang Regular', 'sanfan', SansSerif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003128}}
+.my_xiangbox .xiang .you .zhong {
+  width: 280px;
+  height: 38px;
+  position: absolute;
+  top: 138px;
+  left: 226px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003134}}
+.my_xiangbox .xiang .you .zhong h1 {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'PingFang Regular', 'sanfan', SansSerif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003140}}
+.my_xiangbox .xiang .you .xia {
+  width: 280px;
+  height: 38px;
+  position: absolute;
+  top: 135px;
+  left: 226px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003146}}
+.my_xiangbox .xiang .you .xia h1 {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: 'PingFang Regular', 'sanfan', SansSerif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003153}}
+.my_xiangbox .xiang .di {
+  width: 1000px;
+  height: 228px;
+  position: absolute;
+  right: 43px;
+  bottom: 278px;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003162}}
+.my_xiangbox .xiang .lan {
+  width: 370px;
+  height: 300px;
+  position: absolute;
+  left: 216px;
+  top: 500px;
+  background: url(../images/contact/my_xiang_03_07.png) no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003172}}
+.my_xiangbox .xiang .youzi {
+  width: 665px;
+  height: 120px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url(../images/contact/my_xiang_15.png) no-repeat;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003181}}
+.my_xiangbox .xiang .zuozi {
+  width: 424px;
+  height: 65px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003187}}
+.my_xiangbox .xiang .zuozi h1 {
+  font-size: 20px;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-family: 'PingFang Regular', 'sanfan', SansSerif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003195}}
+.my_xiangbox .xia {
+  width: 1200px;
+  height: 380px;
+  margin: 90px auto 0;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003200}}
+.my_xiangbox .xia .zuo {
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003206}}
+.my_xiangbox .xia .zuo input {
+  width: 300px;
+  height: 58px;
+  border-radius: 10px;
+  padding-left: 50px;
+  border: 2px solid #cdcdcd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003214}}
+.my_xiangbox .xia .zuo img {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  width: 20px;
+  height: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003222}}
+.my_xiangbox .xia .zhong {
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 375px;
+  top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003228}}
+.my_xiangbox .xia .zhong input {
+  width: 300px;
+  height: 58px;
+  border-radius: 10px;
+  padding-left: 50px;
+  border: 2px solid #cdcdcd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003235}}
+.my_xiangbox .xia .zhong img {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  width: 20px;
+  height: 22px;
+  z-index: 3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003244}}
+.my_xiangbox .xia .you {
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  left: 750px;
+  top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003250}}
+.my_xiangbox .xia .you input {
+  width: 300px;
+  height: 58px;
+  border-radius: 10px;
+  padding-left: 50px;
+  border: 2px solid #cdcdcd;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003257}}
+.my_xiangbox .xia .you img {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  width: 20px;
+  height: 22px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003265}}
+.my_xiangbox .xia .zhongxia {
+  width: 1100px;
+  height: 227px;
+  position: absolute;
+  left: 0;
+  top: 80px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003271}}
+.my_xiangbox .xia .zhongxia textarea {
+  width: 1100px;
+  height: 225px;
+  border: 2px solid #cdcdcd;
+  border-radius: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003277}}
+.my_xiangbox .xia .zhongxia h1 {
+  font-size: 16px;
+  color: #9a9a9a;
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003285}}
+.my_xiangbox .xia .fa {
+  width: 120px;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  background: #10518f;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003295}}
+.my_xiangbox .xia .fa a {
+  color: #ffffff;
+  line-height: 35px;
+  font-size: 16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003301}}
+.my_xiangbox .xia .chong {
+  width: 120px;
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 140px;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  text-align: center;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003311}}
+.my_xiangbox .xia .chong a {
+  color: #000000;
+  line-height: 35px;
+  font-size: 16px;
+}

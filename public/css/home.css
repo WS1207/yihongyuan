@@ -1,0 +1,476 @@
+.yq_tab_module .yq_tab_frame, .yq_tab_module .yq_tab_center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+@font-face {
+  font-family: 'PingFang Medium';
+  src: url("../fonts/PingFang Medium.ttf"); }
+
+@font-face {
+  font-family: 'PingFang Regular';
+  src: url("../fonts/PingFang Regular.ttf"); }
+
+.x_carousel {
+  width: 100%;
+  height: 718px;
+  position: relative;
+  overflow: hidden; }
+  .x_carousel .x_carouselbox {
+    width: 500%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .8s ease; }
+    .x_carousel .x_carouselbox .x_imgs {
+      width: 100%;
+      height: 718px;
+      position: absolute;
+      top: 0; }
+  .x_carousel .btns {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 180px;
+    height: 25px; }
+    .x_carousel .btns .btn {
+      width: 10px;
+      height: 10px;
+      background: #f9e4cd;
+      float: left;
+      margin-right: 10px;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      cursor: pointer; }
+
+.wenhuabox {
+  width: 100%;
+  height: 480px;
+  margin: 183px 0 150px 0; }
+  .wenhuabox .wenhua {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; }
+    .wenhuabox .wenhua .zuo {
+      width: 708px;
+      height: 100%;
+      float: left; }
+      .wenhuabox .wenhua .zuo .tu img {
+        width: 450px;
+        height: 110px; }
+      .wenhuabox .wenhua .zuo .zi {
+        margin-top: 65px;
+        width: 100%;
+        height: 120px; }
+        .wenhuabox .wenhua .zuo .zi p {
+          font-size: 14px;
+          color: #1e1e1e;
+          font-family: 'PingFang Regular', 'sanfan', SansSerif;
+          font-weight: normal; }
+      .wenhuabox .wenhua .zuo .h1 {
+        width: 562px;
+        height: 18px;
+        margin-top: 40px; }
+        .wenhuabox .wenhua .zuo .h1 h1 {
+          font-size: 18px;
+          font-weight: bold;
+          color: #1e1e1e;
+          font-family: 'PingFang Regular', 'sanfan', SansSerif; }
+      .wenhuabox .wenhua .zuo .xiang {
+        margin-top: 50px; }
+        .wenhuabox .wenhua .zuo .xiang img {
+          width: 144px;
+          height: 70px; }
+    .wenhuabox .wenhua .you {
+      float: right;
+      width: 480px; }
+      .wenhuabox .wenhua .you img {
+        width: 480px;
+        height: 480px; }
+
+.yq-jin-title {
+  width: 660px;
+  height: 210px;
+  margin: 0 auto; }
+
+.yq-jin-text {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 35px;
+  text-align: center;
+  overflow: hidden; }
+  .yq-jin-text > p {
+    font-size: 18px;
+    font-family: "PingFang Regular";
+    color: #dfdfdf; }
+
+.yq_tab_module {
+  width: 100%;
+  height: 650px;
+  margin-bottom: 27px;
+  position: relative; }
+  .yq_tab_module .yq_tab_bgmap {
+    width: 100%;
+    height: 253px;
+    background: url(../images/yq-01_02.png);
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 225px; }
+  .yq_tab_module .yq_tab_nav {
+    width: 1200px;
+    height: 83px;
+    padding-left: 72px;
+    margin: 0 auto; }
+    .yq_tab_module .yq_tab_nav ul {
+      width: 1200px;
+      height: 83px; }
+      .yq_tab_module .yq_tab_nav ul li {
+        width: 240px;
+        height: 96px;
+        margin-right: 55px;
+        padding-left: 25px;
+        box-sizing: border-box;
+        float: left;
+        line-height: 116px;
+        cursor: pointer;
+        text-align: left; }
+      .yq_tab_module .yq_tab_nav ul .active {
+        background: url(../images/yq-010.png); }
+      .yq_tab_module .yq_tab_nav ul .yq_tab_list {
+        margin-right: 0; }
+  .yq_tab_module .yq_tab_frame {
+    width: 1100px;
+    height: 485px;
+    position: absolute;
+    top: 83px;
+    background-image: url(../images/yq-02_03.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .yq_tab_module .yq_tab_center {
+    width: 1046px;
+    height: 415px;
+    background: silver; }
+
+.yq-tab-text {
+  position: absolute;
+  bottom: 185px;
+  left: 0;
+  z-index: 55555;
+  width: 100%;
+  height: 40px;
+  background-image: url(../images/yq-tu_03.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.yq-chang-title {
+  width: 100%;
+  height: 30px;
+  text-align: center; }
+  .yq-chang-title > h5 {
+    font-size: 12px;
+    font-family: "PingFang Regular";
+    color: #d5d5d5; }
+  .yq-chang-title > h1 {
+    font-size: 20px;
+    font-family: "PingFang Regular";
+    color: #1e1e1e;
+    letter-spacing: 2px; }
+
+.yq-chang-text {
+  width: 100%;
+  height: 75px;
+  margin-top: 25px;
+  margin-bottom: 35px; }
+  .yq-chang-text .yq-chang {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    .yq-chang-text .yq-chang > p {
+      font-size: 14px;
+      font-family: "PingFang Regular";
+      color: #646464; }
+
+.yq-more {
+  width: 160px;
+  height: 70px;
+  margin: 0 auto; }
+
+.xm_show {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto; }
+
+.xm_title {
+  text-align: center;
+  margin: 73px auto; }
+
+.xm_content {
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+  .xm_content li {
+    width: 25%;
+    height: 600px;
+    float: left;
+    position: relative;
+    cursor: pointer; }
+    .xm_content li:hover .xm_people {
+      transform: scale(1.35); }
+    .xm_content li:hover .xm_xd {
+      display: none; }
+    .xm_content li:hover .xm_xb {
+      opacity: 1; }
+    .xm_content li:hover .xm_xz {
+      left: 130px;
+      top: 350px; }
+    .xm_content li:hover .xm_xj {
+      opacity: 1; }
+    .xm_content li .xm_people {
+      width: 222px;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xd {
+      position: absolute;
+      top: 327px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xz {
+      position: absolute;
+      top: 234px;
+      left: 180px;
+      transition: all 0.8s ease; }
+    .xm_content li .xm_xb {
+      position: absolute;
+      top: 0px;
+      left: 78px;
+      transition: all 0.8s ease;
+      opacity: 0; }
+    .xm_content li .xm_xj {
+      position: absolute;
+      top: 510px;
+      left: 158px;
+      transition: all 0.8s ease;
+      opacity: 0; }
+
+.my_navbox {
+  width: 100%;
+  height: 1328px;
+  margin-top: 140px; }
+  .my_navbox .my_shang {
+    height: 155px;
+    width: 1200px;
+    background: url(../images/home/my_hua1_03.png) no-repeat;
+    background-size: cover;
+    position: relative; }
+    .my_navbox .my_shang img {
+      width: 802px;
+      position: absolute;
+      top: 92px;
+      left: 0;
+      height: 2px; }
+    .my_navbox .my_shang .my_zi {
+      width: 444px;
+      height: 30px;
+      position: absolute;
+      top: -21px;
+      left: 848px; }
+      .my_navbox .my_shang .my_zi img {
+        width: 444px;
+        height: 30px; }
+    .my_navbox .my_shang .my_tu {
+      width: 268px;
+      height: 155px;
+      position: absolute;
+      left: 1292px;
+      top: -90px; }
+      .my_navbox .my_shang .my_tu img {
+        width: 268px;
+        height: 154px; }
+  .my_navbox .my_xia {
+    width: 1200px;
+    margin: 90px auto 0;
+    position: relative; }
+    .my_navbox .my_xia .shang .hui {
+      width: 760px;
+      height: 470px;
+      position: absolute;
+      top: 107px;
+      right: 0;
+      background: #eeeeee; }
+      .my_navbox .my_xia .shang .hui .zi {
+        width: 477px;
+        height: 202px;
+        position: absolute;
+        left: 166px;
+        top: 73px; }
+        .my_navbox .my_xia .shang .hui .zi p {
+          font-size: 14px;
+          font-weight: bold;
+          color: #1e1e1e;
+          line-height: 1.5em; }
+        .my_navbox .my_xia .shang .hui .zi .p1 {
+          margin-top: 26px;
+          line-height: 1.5em; }
+      .my_navbox .my_xia .shang .hui .xiang {
+        width: 148px;
+        height: 52px;
+        position: absolute;
+        left: 166px;
+        bottom: 100px; }
+    .my_navbox .my_xia .shang .zi {
+      width: 384px;
+      height: 55px;
+      position: absolute;
+      left: 600px;
+      top: 2px; }
+      .my_navbox .my_xia .shang .zi img {
+        width: 377px;
+        height: 14px; }
+      .my_navbox .my_xia .shang .zi .yuan {
+        position: absolute;
+        top: 20px; }
+        .my_navbox .my_xia .shang .zi .yuan img {
+          width: 380px;
+          height: 23px; }
+    .my_navbox .my_xia .shang .xian {
+      width: 518px;
+      height: 2px;
+      position: absolute;
+      top: 54px;
+      right: -350px; }
+    .my_navbox .my_xia .shang img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 66; }
+    .my_navbox .my_xia .xia {
+      position: absolute;
+      top: 610px;
+      width: 1200px;
+      height: 475px; }
+      .my_navbox .my_xia .xia .zuo {
+        width: 600px;
+        height: 100%; }
+        .my_navbox .my_xia .xia .zuo .tu {
+          position: absolute;
+          top: 20px;
+          left: 231px; }
+          .my_navbox .my_xia .xia .zuo .tu img {
+            width: 375px;
+            height: 60px; }
+        .my_navbox .my_xia .xia .zuo .zi {
+          position: absolute;
+          top: 120px;
+          width: 600px;
+          height: 245px; }
+          .my_navbox .my_xia .xia .zuo .zi p {
+            text-align: right;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.8em;
+            color: #1e1e1e;
+            font-family: 'PingFang Regular', 'sanfan', SansSerif; }
+          .my_navbox .my_xia .xia .zuo .zi .p1 {
+            margin-top: 44px; }
+        .my_navbox .my_xia .xia .zuo .xiang {
+          width: 148px;
+          height: 54px;
+          position: absolute;
+          left: 444px;
+          bottom: 60px; }
+      .my_navbox .my_xia .xia .you {
+        width: 512px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden; }
+        .my_navbox .my_xia .xia .you img {
+          width: 512px;
+          height: 475px; }
+
+.my_chanbox {
+  width: 100%;
+  height: 900px;
+  margin-bottom: 130px;
+  position: relative; }
+  .my_chanbox .chan {
+    height: 900px;
+    width: 1200px;
+    margin: 155px auto 0; }
+    .my_chanbox .chan .shang {
+      width: 1200px;
+      height: 100px; }
+      .my_chanbox .chan .shang img {
+        width: 449px;
+        height: 101px; }
+    .my_chanbox .chan .xia {
+      width: 1200px;
+      margin-top: 104px;
+      position: absolute;
+      z-index: 5; }
+      .my_chanbox .chan .xia .zuo {
+        position: absolute;
+        left: 4.5px; }
+        .my_chanbox .chan .xia .zuo img {
+          width: 383px;
+          height: 596px; }
+      .my_chanbox .chan .xia .zhong {
+        position: absolute;
+        left: 387px;
+        top: 215px; }
+        .my_chanbox .chan .xia .zhong .hua {
+          position: absolute;
+          left: 213px;
+          top: -180px;
+          z-index: 99999; }
+          .my_chanbox .chan .xia .zhong .hua img {
+            width: 161px;
+            height: 332px; }
+        .my_chanbox .chan .xia .zhong img {
+          width: 361px;
+          height: 358px; }
+      .my_chanbox .chan .xia .you {
+        position: absolute;
+        top: 215px;
+        right: 0; }
+        .my_chanbox .chan .xia .you img {
+          width: 454px;
+          height: 520px; }
+  .my_chanbox .bei {
+    width: 100%;
+    height: 595px;
+    position: absolute;
+    top: 304px; }
+    .my_chanbox .bei .zi {
+      width: 540px;
+      height: 300px;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      background: url(../images/home/my_chan_06.png) no-repeat;
+      background-size: cover; }
+    .my_chanbox .bei .hei {
+      width: 100%;
+      height: 305px;
+      position: absolute;
+      background: url(../images/home/my_chan_10.png) no-repeat;
+      background-size: cover;
+      bottom: 0; }

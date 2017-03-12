@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+@keyframes rightin {
+  0% {
+    transform: translate3d(100%, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes rightout {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes leftin {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes leftout {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(100%, 0, 0); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px; }
+
+.container {
+  width: 100%;
+  min-height: 200px; }
+  .container .top {
+    width: 100%;
+    height: 88px;
+    background: red; }
+  .container .banner {
+    width: 100%;
+    height: 500px;
+    position: relative; }
+    .container .banner .img {
+      width: 100%;
+      height: 500px;
+      border: 0;
+      background: url("../images/w14.png") no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+  .container .btn {
+    width: 1200px;
+    height: 22px;
+    background: #fff;
+    margin: auto;
+    margin-top: 50px; }
+    .container .btn ul {
+      width: 1200px;
+      height: 22px;
+      line-height: 22px;
+      margin-left: -10px; }
+      .container .btn ul .a {
+        float: left;
+        min-width: 40px;
+        height: 22px;
+        margin-left: 10px;
+        font-size: 15px;
+        line-height: 22px; }
+        .container .btn ul .a .gt {
+          width: 15px;
+          height: 15px;
+          vertical-align: text-top; }
+        .container .btn ul .a .b {
+          width: 15px;
+          height: 15px;
+          vertical-align: text-top;
+          margin-left: 15px;
+          margin-right: 15px; }
+  .container .con1 {
+    width: 1200px;
+    margin: auto;
+    min-height: 100px;
+    margin-top: 82px; }
+    .container .con1 .bigline {
+      width: 40px;
+      height: 6px;
+      background: #10518F;
+      margin-top: 32px;
+      position: relative; }
+      .container .con1 .bigline .smallline {
+        width: 888px;
+        height: 1px;
+        background: #10518F;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+    .container .con1 .conp {
+      margin-top: 24px; }
+      .container .con1 .conp p {
+        color: #d2d2d2;
+        font-size: 14px;
+        font-family: " 苹方";
+        width: 1060px; }
+    .container .con1 .conimg {
+      margin-top: 80px;
+      position: relative; }
+      .container .con1 .conimg .p1 {
+        margin-top: 56px; }
+    .container .con1 .right {
+      width: 1200px;
+      min-height: 200px;
+      margin-top: 110px;
+      position: relative; }
+      .container .con1 .right .rp {
+        height: 436px;
+        background: #EEEEEE;
+        width: 448px;
+        position: absolute;
+        right: 0;
+        top: 0; }
+        .container .con1 .right .rp .rp1 {
+          width: 380px; }
+          .container .con1 .right .rp .rp1 h5 {
+            font-size: 20px;
+            padding-top: 58px;
+            text-align: right; }
+          .container .con1 .right .rp .rp1 p {
+            padding-top: 10px;
+            margin-left: 30px;
+            width: 365px;
+            color: #d2d2d2;
+            font-size: 14px; }
+      .container .con1 .right .w7img {
+        position: absolute;
+        right: 14px;
+        top: 0; }
+  .container .page {
+    width: 310px;
+    height: 40px;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 140px; }
+    .container .page .prev {
+      width: 13px;
+      height: 36px;
+      background: url(../images/zyj_page_1.png) no-repeat center center;
+      float: left; }
+    .container .page .next {
+      width: 13px;
+      height: 36px;
+      background: url(../images/zyj_page_2.png) no-repeat center center;
+      float: left; }
+    .container .page .rectbox {
+      margin-left: 15px; }
+      .container .page .rectbox li:last-child .xian {
+        display: none; }
+      .container .page .rectbox li.active {
+        background: url("../images/zyj_page_4.png") no-repeat center center; }
+        .container .page .rectbox li.active .rect {
+          color: #fff; }
+      .container .page .rectbox li {
+        float: left;
+        cursor: pointer;
+        position: relative;
+        width: 44px;
+        height: 36px;
+        background: url("../images/zyj_page_3.png") no-repeat center center; }
+        .container .page .rectbox li .xian {
+          position: absolute;
+          right: -5px;
+          top: 5px; }
+        .container .page .rectbox li .rect {
+          z-index: 1;
+          font-size: 13px;
+          font-family: "SanFranciscoDisplay Regular";
+          text-align: center;
+          line-height: 36px;
+          color: #9e9e9e; }
+
+.conimg img:nth-child(2) {
+  margin-top: 26px; }
+
+.conimg img:nth-child(3) {
+  margin-left: 22px; }
