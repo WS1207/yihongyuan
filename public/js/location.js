@@ -25205,7 +25205,12 @@ var AppNav = function (_React$Component) {
     function AppNav(props) {
         _classCallCheck(this, AppNav);
 
-        return _possibleConstructorReturn(this, (AppNav.__proto__ || Object.getPrototypeOf(AppNav)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (AppNav.__proto__ || Object.getPrototypeOf(AppNav)).call(this, props));
+
+        _this.state = {
+            mode: 'inline'
+        };
+        return _this;
     }
 
     _createClass(AppNav, [{
@@ -25284,8 +25289,8 @@ var AppNav = function (_React$Component) {
                                 _menu2.default,
                                 {
                                     mode: 'inline',
-                                    defaultSelectedKeys: openKeys,
-                                    defaultOpenKeys: selectKeys,
+                                    defaultSelectedKeys: selectKeys,
+                                    defaultOpenKeys: openKeys,
                                     style: { height: '100%' }
                                 },
                                 React.createElement(

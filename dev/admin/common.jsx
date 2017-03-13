@@ -14,6 +14,9 @@ const menu = (
 class AppNav extends React.Component {
     constructor(props) {
         super(props);
+        this.state={
+            mode:'inline'
+        }
     }
     render() {
         const urlInfo = location.pathname.split('/');
@@ -59,8 +62,8 @@ class AppNav extends React.Component {
                         >
                             <Menu
                                 mode="inline"
-                                defaultSelectedKeys={openKeys}
-                                defaultOpenKeys={selectKeys}
+                                defaultSelectedKeys={selectKeys}
+                                defaultOpenKeys={openKeys}
                                 style={{height: '100%'}}
                             >
                                 <SubMenu

@@ -25205,7 +25205,12 @@ var AppNav = function (_React$Component) {
     function AppNav(props) {
         _classCallCheck(this, AppNav);
 
-        return _possibleConstructorReturn(this, (AppNav.__proto__ || Object.getPrototypeOf(AppNav)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (AppNav.__proto__ || Object.getPrototypeOf(AppNav)).call(this, props));
+
+        _this.state = {
+            mode: 'inline'
+        };
+        return _this;
     }
 
     _createClass(AppNav, [{
@@ -25284,8 +25289,8 @@ var AppNav = function (_React$Component) {
                                 _menu2.default,
                                 {
                                     mode: 'inline',
-                                    defaultSelectedKeys: openKeys,
-                                    defaultOpenKeys: selectKeys,
+                                    defaultSelectedKeys: selectKeys,
+                                    defaultOpenKeys: openKeys,
                                     style: { height: '100%' }
                                 },
                                 React.createElement(
@@ -37059,15 +37064,15 @@ var WangEditor = function (_React$Component) {
     _createClass(WangEditor, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.eidtor = new wangEditor(this.e);
-            this.eidtor.config.uploadImgUrl = this.props.url;
-            this.eidtor.config.menus = $.map(wangEditor.config.menus, function (item, key) {
+            this.editor = new wangEditor(this.e);
+            this.editor.config.uploadImgUrl = this.props.url;
+            this.editor.config.menus = $.map(wangEditor.config.menus, function (item, key) {
                 if (item === 'location') {
                     return null;
                 }
                 return item;
             });
-            this.eidtor.create();
+            this.editor.create();
             if (this.props.content) {
                 this.editor.$txt.html(this.props.content);
             }
@@ -37438,8 +37443,7 @@ ReactDOM.render(React.createElement(
     React.createElement(
         'div',
         { className: 'des' },
-        React.createElement(Rows, null),
-        React.createElement(o.WangEditor, { url: '/admin/txt/', save: aa, content: '<h1>aaaaaa</h1>' })
+        React.createElement(Rows, null)
     )
 ), document.querySelector('#page'));
 

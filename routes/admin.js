@@ -10,14 +10,22 @@ const mysql = require('../mysql');
 //1欢迎页
 router.get('/', (req, res) => {
     res.sendFile(path.resolve('./views/admin/welcome.html'))
-})
+});
 
+router.post('/txt', upload.single('wangEditorH5File'),(req, res)=>{
+    var o=fs.createWriteStream('public/images/'+req.file.originalname);
+    fs.createReadStream(req.file.path).pipe(o);
+    o.on('finish',function () {
+        fs.unlink(path.resolve(req.file.path))
+    })
+    res.end('/images/'+req.file.originalname);
+})
 
 //2管理员管理
 //信息
 router.get('/manage', (req, res) => {
     res.sendFile(path.resolve('./views/admin/manage.html'))
-})
+});
 //修改密码
 router.get('/manage/password', (req, res) => {
     res.sendFile(path.resolve('./views/admin/password.html'))
@@ -95,6 +103,7 @@ router.get('/contact', (req, res) => {
 router.get('/contact/location', (req, res) => {
     res.sendFile(path.resolve('./views/admin/location.html'))
 })
+
 
 //图片上传
 router.post('/upload', upload.single('avatar'), (req, res) => {

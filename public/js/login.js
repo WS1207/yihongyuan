@@ -33912,6 +33912,7 @@ var NormalLoginForm = function (_React$Component) {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json'
                         },
+
                         body: JSON.stringify(values)
                     }).then(function (res) {
                         return res.json();
