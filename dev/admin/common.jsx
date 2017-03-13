@@ -6,7 +6,7 @@ const {Header, Content, Footer, Sider} = Layout;
 const menu = (
     <Menu>
         <Menu.Item key="0">
-            <a href="/admin/page">退出</a>
+            <a href="/login/logout">退出</a>
         </Menu.Item>
     </Menu>
 );
@@ -27,7 +27,6 @@ class AppNav extends React.Component {
         } else {
             var selectKeys = [urlInfo.slice(0, urlInfo.length).join('/')];
         }
-        console.log(openKeys, selectKeys);
         return (
             <Layout>
                 <Header className="header" style={{fontSize: '20px', color: '#fff'}}>
@@ -70,7 +69,7 @@ class AppNav extends React.Component {
                                     key="admin/manage"
                                     title={<span><Icon type="user"/><span className="nav-text"><a href=""></a>管理员</span></span>}
                                 >
-                                    <Menu.Item key="admin/manage"><a href="/admin/manage">管理员信息</a></Menu.Item>
+                                    <Menu.Item key="admin/manage/message"><a href="/admin/manage/message">管理员信息</a></Menu.Item>
                                     <Menu.Item key="admin/manage/password"><a href="/admin/manage/password">修改密码</a></Menu.Item>
                                 </SubMenu>
 
@@ -78,19 +77,19 @@ class AppNav extends React.Component {
                                     key="admin/culture"
                                     title={<span><Icon type="team"/><span className="nav-text">晋韵文化</span></span>}
                                 >
-                                    <Menu.Item key="admin/culture/heading"><a href="/admin/culture">标题管理</a></Menu.Item>
-                                    <Menu.Item key="admin/culture/essay"><a href="/admin/culture/eassy">文章管理</a></Menu.Item>
+                                    <Menu.Item key="admin/culture/heading"><a href="/admin/culture/heading">标题管理</a></Menu.Item>
+                                    <Menu.Item key="admin/culture/essay"><a href="/admin/culture/essay">文章管理</a></Menu.Item>
 
                                 </SubMenu>
                                 <SubMenu className="delete" key="admin/paperCut"
                                          title={<span style={{fontFamily: ''}}><Icon type="pushpin-o"/><a href="/admin/paperCut" style={{color:'rgba(0,0,0,.65)'}}>剪纸文化</a></span>}>
                                 </SubMenu>
                                 <SubMenu key="admin/contact" title={<span><Icon type="phone"/>联系我们</span>}>
-                                    <Menu.Item key="admin/contact/message"><a href="/admin/contact">留言管理</a></Menu.Item>
+                                    <Menu.Item key="admin/contact/message"><a href="/admin/contact/message">留言管理</a></Menu.Item>
                                     <Menu.Item key="admin/contact/location"><a href="/admin/contact/location"></a>地址管理</Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="admin/tour" title={<span><Icon type="camera-o"/>旅游产品</span>}>
-                                    <Menu.Item key="admin/tour/video"><a href="/admin/tour">视频管理</a></Menu.Item>
+                                    <Menu.Item key="admin/tour/video"><a href="/admin/tour/video">视频管理</a></Menu.Item>
                                     <Menu.Item key="admin/tour/products"><a href="/admin/tour/products">产品管理</a></Menu.Item>
                                 </SubMenu>
                             </Menu>

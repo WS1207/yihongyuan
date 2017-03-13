@@ -2,213 +2,62 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const nav = require('./common.jsx');
 
-import {Layout, Menu, Icon, Dropdown, Input, Row, Col, Progress, Button, notification} from 'antd';
-const {SubMenu} = Menu;
-const {Header, Content, Footer, Sider} = Layout;
-const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="/login">退出</a>
-        </Menu.Item>
-    </Menu>
-);
+import {Table} from 'antd';
 
+const columns = [{
+    key: 'name',
+    title: '姓名',
+    dataIndex: 'name'
+    // render: text => <a href="#">{text}</a>,
+}, {
+    key: 'phone',
+    title: '电话',
+    dataIndex: 'phone',
+},  {
+    key: 'email',
+    title: '邮箱',
+    dataIndex: 'email',
+}, {
+    key: 'content',
+    title: '内容',
+    dataIndex: 'content',
+    render: (text, record)=><a href={`/admin/contact/message/${record.id}`}>{text}</a>
+}, {
+    key: 'delete',
+    title: '删除',
+    render: record=><a href={`/admin/contact/message/delete/${record.id}`}>X</a>
+}];
 
-class Name extends React.Component {
+class MessagePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            userName: '',
+            data: []
         };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-        this.emitEmpty = this.emitEmpty.bind(this)
     }
-
-    emitEmpty() {
-        this.userNameInput.focus();
-        this.setState({userName: ''});
+    componentDidMount() {
+        fetch('/admin/contact/message/name', {
+            credentials: 'same-origin'
+        }).then((res)=>res.json()).then((data)=> {
+            this.setState({
+                data: data
+            });
+        });
     }
-
-    onChangeUserName(e) {
-        this.setState({userName: e.target.value});
-    }
-
-    render() {
-        const {userName} = this.state;
-        const suffix = userName ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                placeholder="Enter your Name"
-                prefix={<Icon type="user"/>}
-                suffix={suffix}
-                value={userName}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-class You extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            you: '',
-        };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-        this.emitEmpty = this.emitEmpty.bind(this)
-
-    }
-
-    emitEmpty() {
-        this.userNameInput.focus();
-        this.setState({you: ''});
-    }
-
-    onChangeUserName(e) {
-        this.setState({you: e.target.value});
-    }
-
-    render() {
-        const {you} = this.state;
-        const suffix = you ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                placeholder="Enter your Email"
-                prefix={<Icon type="mail"/>}
-                suffix={suffix}
-                value={you}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-class Phone extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            phone: '',
-        };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-        this.emitEmpty = this.emitEmpty.bind(this)
-
-    }
-
-    emitEmpty() {
-        this.userNameInput.focus();
-        this.setState({phone: ''});
-    }
-
-    onChangeUserName(e) {
-        this.setState({phone: e.target.value});
-    }
-
-    render() {
-        const {phone} = this.state;
-        const suffix = phone ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                placeholder="Enter your Phone"
-                prefix={<Icon type="phone"/>}
-                suffix={suffix}
-                value={phone}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-class Qu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            qu: '',
-        };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-
-    }
-
-    onChangeUserName(e) {
-        this.setState({qu: e.target.value});
-    }
-
-    render() {
-        const {qu} = this.state;
-        const suffix = qu ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                style={{marginTop: "20px"}}
-                type="textarea"
-                placeholder="Enter your LiuYan"
-                suffix={suffix}
-                value={qu}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-
-
-const openNotificationWithIcon = (type) => {
-    notification.config({
-        placement: 'topRight',
-        top: 50,
-        duration: 0,
-    });
-    notification[type]({
-        description: '成功',
-    });
-
-};
-
-class Liu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: 1
-        }
-    }
-
     render() {
         return (
-            <div style={{width: 840}}>
-                <Progress percent={50} status="active" style={{margin: "20px 0"}}/>
-                <Row gutter={24}>
-                    <Col span={12}>
-                        <Row gutter={3}>
-                            <Col span={8}><Name/></Col>
-                            <Col span={8}><Phone /></Col>
-                            <Col span={8}><You /></Col>
-                        </Row>
-                        <Row gutter={3}>
-                            <Col span={24}><Qu /></Col>
-                        </Row>
-                        <Button onClick={() => openNotificationWithIcon('success')} type="primary"
-                                style={{margin: "20px 140px "}}>删除该条留言区</Button>
-                    </Col>
-                    <Col span={12}>
-                        <Row gutter={3}>
-                            <Col span={8}><Name/></Col>
-                            <Col span={8}><Phone /></Col>
-                            <Col span={8}><You /></Col>
-                        </Row>
-                        <Row gutter={3}>
-                            <Col span={24}><Qu /></Col>
-                        </Row>
-                        <Button onClick={() => openNotificationWithIcon('success')} type="primary"
-                                style={{margin: "20px 140px "}}>删除该条留言区</Button>
-                    </Col>
-                </Row>
-
+            <div>
+                <Table pagination={{pageSize:5}} rowKey={record=>record.id} columns={columns}
+                       dataSource={this.state.data}/>
             </div>
-        )
+        );
     }
 }
+// rowSelection object indicates the need for row selection
 ReactDOM.render(
     <nav.AppNav>
         <div className="des">
-            <Liu/>
+            <MessagePage/>
         </div>
     </nav.AppNav>
     , document.querySelector('#page'));

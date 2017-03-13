@@ -23,7 +23,6 @@ class NormalLoginForm extends React.Component {
                     data += i + '=' + values[i] + '&';
                 }
                 data = data.slice(0, -1);
-
                 fetch('/login/check', {
                     credentials: 'same-origin',
                     method: 'post',
@@ -78,14 +77,13 @@ class NormalLoginForm extends React.Component {
         );
     }
 }
-
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 class Page extends React.Component {
     render() {
         return (
             <Layout>
                 <Header style={{color: '#fff', fontSize: '20px'}}>艺弘缘后台管理系统</Header>
-                <Content style={{padding: '20px', minHeight: '500px'}}>
+                <Content style={{padding: '100px',width:'500px', minHeight: '300px', margin:'0 auto'}}>
                     <WrappedNormalLoginForm />
                 </Content>
                 <Footer>

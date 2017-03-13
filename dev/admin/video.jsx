@@ -1,17 +1,8 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const nav = require('./common.jsx');
-import {Layout, Menu, Dropdown,Upload, Icon, Modal ,Card,Input} from 'antd';
-const {SubMenu} = Menu;
+import {Layout, Dropdown,Upload, Icon, Modal ,Card,Input} from 'antd';
 const {Header, Content, Footer, Sider} = Layout;
-const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="/login">退出</a>
-        </Menu.Item>
-    </Menu>
-);
-
 
 class Cards extends React.Component{
     render(){

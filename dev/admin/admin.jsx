@@ -4,21 +4,11 @@ const ReactDOM = require('react-dom');
 import {Layout, Menu, Breadcrumb, Icon, Dropdown, Row, Col, Upload, message,Card, Button, Input} from 'antd';
 const {SubMenu} = Menu;
 const {Header, Content, Footer, Sider} = Layout;
-const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="/login">退出</a>
-        </Menu.Item>
-    </Menu>
-);
-
-
 function getBase64(img, callback) {
     const reader = new FileReader();
     reader.addEventListener('load', () => callback(reader.result));
     reader.readAsDataURL(img);
 }
-
 function beforeUpload(file) {
     const isJPG = file.type === 'image/jpeg';
     if (!isJPG) {

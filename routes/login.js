@@ -22,8 +22,7 @@ router.get('/', (req, res) => {
         console.log(1);
         res.sendFile(path.resolve("./views/admin/login.html"));
     }
-
-})
+});
 
 router.get('/logout', (req, res) => {
     req.session.login = null;

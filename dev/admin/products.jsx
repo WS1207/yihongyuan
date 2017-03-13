@@ -2,17 +2,9 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const o = require('./wang.jsx');
 const nav = require('./common.jsx');
-import {Switch, Layout, Menu, Icon, Breadcrumb, Row, Col, Upload, Dropdown, message, Card, Button, Input} from 'antd';
+import {Switch, Layout, Icon, Breadcrumb, Row, Col, Upload, Dropdown, message, Card, Button, Input} from 'antd';
 const {Header, Content, Footer, Sider} = Layout;
-const {SubMenu} = Menu;
 
-const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="/login">退出</a>
-        </Menu.Item>
-    </Menu>
-);
 function getBase64(img, callback) {
     const reader = new FileReader();
     reader.addEventListener('load', () => callback(reader.result));
@@ -150,7 +142,6 @@ class Rows extends React.Component {
 
                     </Col>
                     <Col span={8}>
-
                     </Col>
                 </Row>
             </div>

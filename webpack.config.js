@@ -10,6 +10,7 @@ module.exports = {
         heading: path.resolve('./dev/admin/heading.jsx'),
         essay: path.resolve('./dev/admin/essay.jsx'),
         message: path.resolve('./dev/admin/message.jsx'),
+        message_detail: path.resolve('./dev/admin/message_detail.jsx'),
         papercut: path.resolve('./dev/admin/paperCut.jsx'),
         products: path.resolve('./dev/admin/products.jsx'),
         video: path.resolve('./dev/admin/video.jsx'),

@@ -1,16 +1,8 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 const nav = require('./common.jsx');
-import {Layout, Menu, Icon, Dropdown, Form, Input} from 'antd';
-const {SubMenu} = Menu;
+import {Layout, Icon, Dropdown, Form, Input} from 'antd';
 const {Header, Content, Footer, Sider} = Layout;
-const menu = (
-    <Menu>
-        <Menu.Item key="0">
-            <a href="/login">退出</a>
-        </Menu.Item>
-    </Menu>
-);
 
 const FormItem = Form.Item;
 function hasErrors(fieldsError) {

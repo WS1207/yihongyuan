@@ -1,10 +1,11 @@
 const express = require('express');
-const path = require('path')
+const path = require('path');
 const router = express.Router();
-const multer = require('multer')
-const upload = multer({dest: 'uploads/'})
-const fs = require('fs')
-const async = require('async')
+const multer = require('multer');
+const upload = multer({dest: 'uploads/'});
+const fs = require('fs');
+const async = require('async');
+const mysql = require('../mysql');
 // async.series([
 //     function (callback) {
 //         setTimeout(function () {
@@ -32,21 +33,22 @@ router.post('/txt', upload.single('wangEditorH5File'),(req, res)=>{
 
 //2管理员管理
 //信息
-router.get('/manage', (req, res) => {
+router.get('/manage/message', (req, res) => {
     res.sendFile(path.resolve('./views/admin/manage.html'))
 });
+
 //修改密码
 router.get('/manage/password', (req, res) => {
     res.sendFile(path.resolve('./views/admin/password.html'))
-})
+});
 
 //3标题管理
-router.get('/culture', (req, res) => {
+router.get('/culture/heading', (req, res) => {
     res.sendFile(path.resolve('./views/admin/heading.html'))
-})
-router.get('/culture/eassy', (req, res) => {
+});
+router.get('/culture/essay', (req, res) => {
     res.sendFile(path.resolve('./views/admin/essay.html'))
-})
+});
 
 //5剪纸管理
 router.get('/paperCut', (req, res) => {
@@ -54,37 +56,48 @@ router.get('/paperCut', (req, res) => {
 })
 
 //6视频管理
-router.get('/tour', (req, res) => {
+router.get('/tour/video', (req, res) => {
     res.sendFile(path.resolve('./views/admin/video.html'))
 })
 //7产品管理
 router.get('/tour/products', (req, res) => {
     res.sendFile(path.resolve('./views/admin/products.html'))
 })
-
-
 //8留言管理
-router.get('/contact', (req, res) => {
+router.get('/contact/message', (req, res) => {
     res.sendFile(path.resolve('./views/admin/message.html'))
-})
+});
+router.get('/contact/message/name', (req, res) => {
+    mysql.query('select * from message order by id desc', (data)=> {
+        res.json(data);
+    })
+});
+router.get('/contact/message/delete/:id', (req, res)=> {
+    console.log(req.params);
+    mysql.query('delete from message where id = ?',
+        [req.params.id], function (data) {
+            if (data) {
+                res.redirect('/admin/contact/message');
+            }
+        })
+});
+router.get('/contact/message/:id', (req, res)=> {
+    res.sendFile(path.resolve('./views/admin/message_detail.html'));
+});
+router.get('/contact/message/messagedetail/:id', (req, res)=> {
+    mysql.query('select content from message where id = ?', [req.params.id], (result)=> {
+        res.json(result);
+    })
+});
 //9地址管理
 router.get('/contact/location', (req, res) => {
     res.sendFile(path.resolve('./views/admin/location.html'))
-})
-
-
+});
 //图片上传
 router.post('/upload', upload.single('avatar'), (req, res) => {
-    //事件处理异步
-    // var o=fs.createWriteStream('uploads/'+req.originalname)
-    // fs.createReadStream(path.resovle(req.file.path)).pipe(o);
-    // o.on('finish',function () {
-    //     fs.unlink(path.resovle(req.file.path))
-    // })
-    //async处理异步
     async.series([
             function (callback) {
-                fs.createReadStream(req.file.path).pipe(fs.createWriteStream('uploads/' + req.file.originalname))
+                fs.createReadStream(req.file.path).pipe(fs.createWriteStream('uploads/' + req.file.originalname));
                 callback(null)
             },
             function (callback) {
@@ -96,15 +109,5 @@ router.post('/upload', upload.single('avatar'), (req, res) => {
             res.end(req.file.path + req.file.originalname);
         }
     )
-
-})
-
-
-// router.get('/news/:cat_id',function (req,res) {
-//     res.end(req.param.cat_id)
-// });
-// router.get('/news/:cat_id/:news_id',function () {
-//     res.end(''+req.param.cat_id+','+req.param.cat_id)
-// })
-
+});
 module.exports = router;
