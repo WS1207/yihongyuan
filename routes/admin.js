@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-<<<<<<< HEAD
 const multer = require('multer');
 const upload = multer({dest: 'uploads/'});
 const fs = require('fs');
@@ -17,13 +16,11 @@ const mysql = require('../mysql');
 //     console.log(data)
 // })
 //async   异步编程
-=======
-const multer = require('multer')
-const upload = multer({dest: 'uploads/'})
-const fs = require('fs')
-const async = require('async')
-const mysql = require('../mysql');
->>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
+// const multer = require('multer')
+// const upload = multer({dest: 'uploads/'})
+// const fs = require('fs')
+// const async = require('async')
+// const mysql = require('../mysql');
 
 //1欢迎页
 router.get('/', (req, res) => {
@@ -104,14 +101,9 @@ router.post('/paupdate',(req,res)=>{
     })
 })
 
-<<<<<<< HEAD
 //6视频管理
 router.get('/tour/video', (req, res) => {
-=======
-//////////////6视频管理/////////////////////////////////////////
-router.get('/tour', (req, res) => {
->>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
-    res.sendFile(path.resolve('./views/admin/video.html'))
+    res.sendFile(path.resolve('./outerviews/admin/video.html'))
 })
 //7产品管理
 router.get('/tour/products', (req, res) => {

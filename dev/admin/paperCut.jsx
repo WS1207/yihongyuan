@@ -2,11 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const nav = require('./common.jsx');
 
-<<<<<<< HEAD
-import {Switch,Layout, Icon,Breadcrumb, Row, Col, Upload,Dropdown, message,Card, Button, Input} from 'antd';
-=======
 import {Form,Switch,Layout,Menu, Icon,Breadcrumb, Row, Col, Upload,Dropdown, message,Card, Button, Input} from 'antd';
->>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 const { Header, Content, Footer, Sider} = Layout;
 function getBase64(img, callback) {
     const reader = new FileReader();
@@ -14,7 +10,7 @@ function getBase64(img, callback) {
     reader.readAsDataURL(img);
 }
 
-function beforeUpload(file) {
+function beforeUpload (file) {
     const isJPG = file.type === 'image/jpeg';
     if (!isJPG) {
         message.error('You can only upload JPG file!');

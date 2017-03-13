@@ -77,6 +77,7 @@ class NormalLoginForm extends React.Component {
         );
     }
 }
+
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 class Page extends React.Component {
     render() {
