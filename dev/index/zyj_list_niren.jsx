@@ -47,12 +47,12 @@ class History extends React.Component {
         )
     }
 }
-const zyj_tiele = {img: "/public/images/zyj_title_03.png"}
+const zyj_tiele = {img: "/images/zyj_title_03.png"}
 const zyj_niren = [
-    {img: '/public/images/zyj_list_10.png', video: '/public/images/111.mp4'},
-    {img: '/public/images/zyj_list_11.png', video: '/public/images/222.mp4'},
-    {img: '/public/images/zyj_list_12.png', video: '/public/images/333.flv'},
-    {img: '/public/images/zyj_list_13.png', video: '/public/images/video2.mp4'}
+    {img: '/images/zyj_list_10.png', video: '/images/111.mp4'},
+    {img: '/images/zyj_list_11.png', video: '/images/222.mp4'},
+    {img: '/images/zyj_list_12.png', video: '/images/333.mp4'},
+    {img: '/images/zyj_list_13.png', video: '/images/111.mp4'}
 ]
 
 
@@ -61,9 +61,9 @@ class Originone extends React.Component {
         return (
             <ul className="con1">
                 <li className="con-left">
-                    <img src="/public/images/zyj_list_14.png" alt=""/>
+                    <img src="/images/zyj_list_14.png" alt=""/>
                     <div className="zyj-list-sanjiao">
-                        <img src="../public/images/yq-list-01_03.png" alt=""/>
+                        <img src="/images/yq-list-01_03.png" alt=""/>
                     </div>
                 </li>
                 <li className="con-right">
@@ -119,9 +119,9 @@ class Origintwo extends React.Component {
                     </div>
 
                     <div className="yq-list-right">
-                        <img src="../public/images/yq-list_03.png" alt=""/>
+                        <img src="/images/yq-list_03.png" alt=""/>
                         <div className="yq-list-sanjiao">
-                            <img src="../public/images/yq-list-01_03.png" alt=""/>
+                            <img src="/images/yq-list-01_03.png" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ const data = [
     {id: '04'},
     {id: '05'}
 ]
-const zyj_title1 = {img: "/public/images/zyj_title_04.png"}
+const zyj_title1 = {img: "/images/zyj_title_04.png"}
 // ReactDOM.render(<Origin title={zyj_title1}/>, document.getElementById('zyj_origin'))
 
 
@@ -184,12 +184,12 @@ class TxtList extends React.Component {
     }
 }
 const xm_txtlist = [
-    {id: 1, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
-    {id: 2, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
-    {id: 3, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
-    {id: 4, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
-    {id: 5, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
-    {id: 6, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'}
+    {id: 1, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
+    {id: 2, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
+    {id: 3, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
+    {id: 4, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
+    {id: 5, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'},
+    {id: 6, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22'}
 ]
 
 
@@ -208,16 +208,15 @@ class Niren extends React.Component {
         )
     }
 }
-const zyj_title3 = {img: "/public/images/zyj_title_04.png"}
-// ReactDOM.render(<Niren title={zyj_title3}/>, document.getElementById('zyj_niren'))
+const zyj_title3 = {img: "/images/zyj_title_04.png"}
 const headerdata = [
-    {id: 1, title: '品牌介绍', img: '../public/images/st_navhover.png', href: "#"},
-    {id: 1, title: '晋韵文化', img: '../public/images/st_navhover.png', href: "#"},
-    {id: 1, title: '原生态泥人', img: '../public/images/st_niren.png', href: "#"},
-    {id: 1, title: '剪纸艺术', img: '../public/images/st_navhover.png', href: "#"},
-    {id: 1, title: '园林雕塑', img: '../public/images/st_navhover.png', href: "#"},
-    {id: 1, title: '旅游产品', img: '../public/images/st_navhover.png', href: "#"},
-    {id: 1, title: '联系我们', img: '../public/images/st_navhover.png', href: "#"}
+    {id:1,title:'品牌介绍',img:'/images/st_navhover.png',href:"brand"},
+    {id:1,title:'晋韵文化',img:'/images/st_navhover.png',href:"culture"},
+    {id:1,title:'原生态泥人',img:'/images/st_niren.png',href:"clay"},
+    {id:1,title:'剪纸艺术',img:'/images/st_navhover.png',href:"papercut"},
+    {id:1,title:'园林雕塑',img:'/images/st_navhover.png',href:"sculpture"},
+    {id:1,title:'旅游产品',img:'/images/st_navhover.png',href:"tour"},
+    {id:1,title:'联系我们',img:'/images/st_navhover.png',href:"contact"}
 ];
 
 

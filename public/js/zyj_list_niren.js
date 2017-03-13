@@ -21898,6 +21898,7 @@ module.exports = traverseAllChildren;
 /* 299 */,
 /* 300 */,
 /* 301 */,
+<<<<<<< HEAD
 /* 302 */,
 /* 303 */,
 /* 304 */,
@@ -21943,6 +21944,9 @@ module.exports = traverseAllChildren;
 /* 344 */,
 /* 345 */,
 /* 346 */
+=======
+/* 302 */
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22597,6 +22601,53 @@ module.exports = {
 };
 
 /***/ }),
+<<<<<<< HEAD
+=======
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /* 347 */,
 /* 348 */,
 /* 349 */,
@@ -22796,7 +22847,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(15);
+<<<<<<< HEAD
 var common = __webpack_require__(346);
+=======
+var common = __webpack_require__(302);
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 
 var Title = function (_React$Component) {
     _inherits(Title, _React$Component);
@@ -22883,8 +22938,8 @@ var History = function (_React$Component2) {
     return History;
 }(React.Component);
 
-var zyj_tiele = { img: "/public/images/zyj_title_03.png" };
-var zyj_niren = [{ img: '/public/images/zyj_list_10.png', video: '/public/images/111.mp4' }, { img: '/public/images/zyj_list_11.png', video: '/public/images/222.mp4' }, { img: '/public/images/zyj_list_12.png', video: '/public/images/333.flv' }, { img: '/public/images/zyj_list_13.png', video: '/public/images/video2.mp4' }];
+var zyj_tiele = { img: "/images/zyj_title_03.png" };
+var zyj_niren = [{ img: '/images/zyj_list_10.png', video: '/images/111.mp4' }, { img: '/images/zyj_list_11.png', video: '/images/222.mp4' }, { img: '/images/zyj_list_12.png', video: '/images/333.mp4' }, { img: '/images/zyj_list_13.png', video: '/images/111.mp4' }];
 
 var Originone = function (_React$Component3) {
     _inherits(Originone, _React$Component3);
@@ -22904,11 +22959,11 @@ var Originone = function (_React$Component3) {
                 React.createElement(
                     'li',
                     { className: 'con-left' },
-                    React.createElement('img', { src: '/public/images/zyj_list_14.png', alt: '' }),
+                    React.createElement('img', { src: '/images/zyj_list_14.png', alt: '' }),
                     React.createElement(
                         'div',
                         { className: 'zyj-list-sanjiao' },
-                        React.createElement('img', { src: '../public/images/yq-list-01_03.png', alt: '' })
+                        React.createElement('img', { src: '/images/yq-list-01_03.png', alt: '' })
                     )
                 ),
                 React.createElement(
@@ -23006,11 +23061,11 @@ var Origintwo = function (_React$Component4) {
                     React.createElement(
                         'div',
                         { className: 'yq-list-right' },
-                        React.createElement('img', { src: '../public/images/yq-list_03.png', alt: '' }),
+                        React.createElement('img', { src: '/images/yq-list_03.png', alt: '' }),
                         React.createElement(
                             'div',
                             { className: 'yq-list-sanjiao' },
-                            React.createElement('img', { src: '../public/images/yq-list-01_03.png', alt: '' })
+                            React.createElement('img', { src: '/images/yq-list-01_03.png', alt: '' })
                         )
                     )
                 )
@@ -23053,7 +23108,7 @@ var Origin = function (_React$Component5) {
 }(React.Component);
 
 var data = [{ id: '01' }, { id: '02' }, { id: '03' }, { id: '04' }, { id: '05' }];
-var zyj_title1 = { img: "/public/images/zyj_title_04.png" };
+var zyj_title1 = { img: "/images/zyj_title_04.png" };
 // ReactDOM.render(<Origin title={zyj_title1}/>, document.getElementById('zyj_origin'))
 
 
@@ -23130,7 +23185,7 @@ var TxtList = function (_React$Component6) {
     return TxtList;
 }(React.Component);
 
-var xm_txtlist = [{ id: 1, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 2, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 3, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 4, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 5, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 6, img: '/public/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }];
+var xm_txtlist = [{ id: 1, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 2, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 3, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 4, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 5, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }, { id: 6, img: '/images/xlist2.png', title: '哈哈', content: '“哈哈…”，这个孩子年龄…', liu: '999浏览', date: '2016-09-22' }];
 
 var Niren = function (_React$Component7) {
     _inherits(Niren, _React$Component7);
@@ -23165,9 +23220,8 @@ var Niren = function (_React$Component7) {
     return Niren;
 }(React.Component);
 
-var zyj_title3 = { img: "/public/images/zyj_title_04.png" };
-// ReactDOM.render(<Niren title={zyj_title3}/>, document.getElementById('zyj_niren'))
-var headerdata = [{ id: 1, title: '品牌介绍', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '晋韵文化', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '原生态泥人', img: '../public/images/st_niren.png', href: "#" }, { id: 1, title: '剪纸艺术', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '园林雕塑', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '旅游产品', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '联系我们', img: '../public/images/st_navhover.png', href: "#" }];
+var zyj_title3 = { img: "/images/zyj_title_04.png" };
+var headerdata = [{ id: 1, title: '品牌介绍', img: '/images/st_navhover.png', href: "brand" }, { id: 1, title: '晋韵文化', img: '/images/st_navhover.png', href: "culture" }, { id: 1, title: '原生态泥人', img: '/images/st_niren.png', href: "clay" }, { id: 1, title: '剪纸艺术', img: '/images/st_navhover.png', href: "papercut" }, { id: 1, title: '园林雕塑', img: '/images/st_navhover.png', href: "sculpture" }, { id: 1, title: '旅游产品', img: '/images/st_navhover.png', href: "tour" }, { id: 1, title: '联系我们', img: '/images/st_navhover.png', href: "contact" }];
 
 var Zyj_list = function (_React$Component8) {
     _inherits(Zyj_list, _React$Component8);

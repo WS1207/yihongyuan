@@ -21898,6 +21898,7 @@ module.exports = traverseAllChildren;
 /* 299 */,
 /* 300 */,
 /* 301 */,
+<<<<<<< HEAD
 /* 302 */,
 /* 303 */,
 /* 304 */,
@@ -21943,6 +21944,9 @@ module.exports = traverseAllChildren;
 /* 344 */,
 /* 345 */,
 /* 346 */
+=======
+/* 302 */
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22597,6 +22601,53 @@ module.exports = {
 };
 
 /***/ }),
+<<<<<<< HEAD
+=======
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /* 347 */,
 /* 348 */,
 /* 349 */,
@@ -22998,9 +23049,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(15);
+<<<<<<< HEAD
 var common = __webpack_require__(346);
 var STheader = __webpack_require__(411);
 var STfooter = __webpack_require__(410);
+=======
+var common = __webpack_require__(302);
+var STheader = __webpack_require__(395);
+var STfooter = __webpack_require__(394);
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /*头部*/
 var stdata = [{ id: 1, title: '品牌介绍', img: '/images/st_navhover.png', href: "brand" }, { id: 1, title: '晋韵文化', img: '/images/st_navhover.png', href: "culture" }, { id: 1, title: '原生态泥人', img: '/images/st_niren.png', href: "clay" }, { id: 1, title: '剪纸艺术', img: '/images/st_navhover.png', href: "papercut" }, { id: 1, title: '园林雕塑', img: '/images/st_navhover.png', href: "sculpture" }, { id: 1, title: '旅游产品', img: '/images/st_navhover.png', href: "tour" }, { id: 1, title: '联系我们', img: '/images/st_navhover.png', href: "contact" }];
 /*图片在左边*/

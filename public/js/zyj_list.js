@@ -21898,6 +21898,7 @@ module.exports = traverseAllChildren;
 /* 299 */,
 /* 300 */,
 /* 301 */,
+<<<<<<< HEAD
 /* 302 */,
 /* 303 */,
 /* 304 */,
@@ -21943,6 +21944,9 @@ module.exports = traverseAllChildren;
 /* 344 */,
 /* 345 */,
 /* 346 */
+=======
+/* 302 */
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22597,6 +22601,53 @@ module.exports = {
 };
 
 /***/ }),
+<<<<<<< HEAD
+=======
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 /* 347 */,
 /* 348 */,
 /* 349 */,
@@ -22795,9 +22846,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(15);
+<<<<<<< HEAD
 var common = __webpack_require__(346);
+=======
+var common = __webpack_require__(302);
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 
-var headerdata = [{ id: 1, title: '品牌介绍', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '晋韵文化', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '原生态泥人', img: '../public/images/st_niren.png', href: "#" }, { id: 1, title: '剪纸艺术', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '园林雕塑', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '旅游产品', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '联系我们', img: '../public/images/st_navhover.png', href: "#" }];
+var headerdata = [{ id: 1, title: '品牌介绍', img: '/images/st_navhover.png', href: "brand" }, { id: 1, title: '晋韵文化', img: '/images/st_navhover.png', href: "culture" }, { id: 1, title: '原生态泥人', img: '/images/st_niren.png', href: "clay" }, { id: 1, title: '剪纸艺术', img: '/images/st_navhover.png', href: "papercut" }, { id: 1, title: '园林雕塑', img: '/images/st_navhover.png', href: "sculpture" }, { id: 1, title: '旅游产品', img: '/images/st_navhover.png', href: "tour" }, { id: 1, title: '联系我们', img: '/images/st_navhover.png', href: "contact" }];
 
 var data = [{ id: '01' }, { id: '02' }, { id: '03' }, { id: '04' }, { id: '05' }];
 
@@ -22876,7 +22931,7 @@ var Feature = function (_React$Component2) {
                         React.createElement(
                             'div',
                             { className: 'left' },
-                            React.createElement('img', { src: '/public/images/zyj_feature_01.png', alt: '' }),
+                            React.createElement('img', { src: '/images/zyj_feature_01.png', alt: '' }),
                             React.createElement('div', { className: 'zyj_biao_left' })
                         ),
                         React.createElement(
@@ -22896,7 +22951,7 @@ var Feature = function (_React$Component2) {
                         React.createElement(
                             'div',
                             { className: 'left' },
-                            React.createElement('img', { src: '/public/images/zyj_feature_06.png', alt: '' }),
+                            React.createElement('img', { src: '/images/zyj_feature_06.png', alt: '' }),
                             React.createElement('div', { className: 'zyj_biao_right' })
                         )
                     )
@@ -22970,7 +23025,7 @@ var Specialty = function (_React$Component3) {
     return Specialty;
 }(React.Component);
 
-var zyj_list = [{ img: '/public/images/zyj_list_01.png', title: '喜鹊登枝', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。含义来源唐...' }, { img: '/public/images/zyj_list_02.png', title: '鱼跃龙门', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。早在两千多年前便已经在民间流行早在两千多年前便已' }, { img: '/public/images/zyj_list_03.png', title: '事事如意', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/public/images/zyj_list_04.png', title: '喜上眉梢', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。含义来源唐...' }, { img: '/public/images/zyj_list_05.png', title: '猴子吃桃', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/public/images/zyj_list_06.png', title: '连年有余', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/public/images/zyj_list_07.png', title: '二龙戏珠', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/public/images/zyj_list_08.png', title: '虎虎生威', con: '虎虎形容威武雄壮或精神、气势旺盛清龚自珍 《怀我先箴》:言满朝野...' }, { img: '/public/images/zyj_list_09.png', title: '牛气冲天', con: '比喻从根本上改变整个局面。“牛气冲天”比喻事业兴旺...' }];
+var zyj_list = [{ img: '/images/zyj_list_01.png', title: '喜鹊登枝', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。含义来源唐...' }, { img: '/images/zyj_list_02.png', title: '鱼跃龙门', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。早在两千多年前便已经在民间流行早在两千多年前便已' }, { img: '/images/zyj_list_03.png', title: '事事如意', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/images/zyj_list_04.png', title: '喜上眉梢', con: '相信鹊能报喜的观念，早在两千多年前便已经在民间流行。含义来源唐...' }, { img: '/images/zyj_list_05.png', title: '猴子吃桃', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/images/zyj_list_06.png', title: '连年有余', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/images/zyj_list_07.png', title: '二龙戏珠', con: '事事如意是汉族传统吉祥图案之一。由两个柿子和一只如意构图。取吉...' }, { img: '/images/zyj_list_08.png', title: '虎虎生威', con: '虎虎形容威武雄壮或精神、气势旺盛清龚自珍 《怀我先箴》:言满朝野...' }, { img: '/images/zyj_list_09.png', title: '牛气冲天', con: '比喻从根本上改变整个局面。“牛气冲天”比喻事业兴旺...' }];
 
 var Zyj_list = function (_React$Component4) {
     _inherits(Zyj_list, _React$Component4);

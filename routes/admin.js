@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+<<<<<<< HEAD
 const multer = require('multer');
 const upload = multer({dest: 'uploads/'});
 const fs = require('fs');
@@ -16,6 +17,13 @@ const mysql = require('../mysql');
 //     console.log(data)
 // })
 //async   异步编程
+=======
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'})
+const fs = require('fs')
+const async = require('async')
+const mysql = require('../mysql');
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
 
 //1欢迎页
 router.get('/', (req, res) => {
@@ -50,13 +58,59 @@ router.get('/culture/essay', (req, res) => {
     res.sendFile(path.resolve('./views/admin/essay.html'))
 });
 
-//5剪纸管理
+//////////////////5剪纸管理//////////////////////////////////////////
 router.get('/paperCut', (req, res) => {
     res.sendFile(path.resolve('./views/admin/paperCut.html'))
 })
+//剪纸图片上传
+router.post('/upload', upload.single('file'), (req, res) => {
+    async.series([
+        function (callback) {
+            var o = fs.createWriteStream('uploads/' + req.file.originalname);
+            fs.createReadStream(req.file.path).pipe(o);
+            callback(null)
+        }, function (callback) {
+            fs.unlink(path.resolve(req.file.path));
+            callback(null);
+        }, function () {
+            res.end('ok')
+        }
+    ])
 
+});
+//查找
+router.post('/paperCon', (req, res) => {
+    mysql.query('select * from papercut', [], function (data) {
+        res.json(data);
+    })
+});
+//刪除
+router.post('/paperdel', (req, res) => {
+    mysql.query('delete from papercut where id = ?',
+        [req.body.id], function (data) {
+            res.json('ok')
+        })
+});
+//添加
+router.post('/add', (req, res) => {
+    mysql.query('INSERT INTO papercut (title,content,url,rec) VALUES (?,?,?,?) ', [req.body.title,req.body.content,req.body.url, req.body.rec], function (data) {
+        console.log(data);
+    })
+});
+//修改
+router.post('/paupdate',(req,res)=>{
+    mysql.query('UPDATE papercut set (title,content,url,rec) values(?,?,?,?)', [req.body.title,req.body.content,req.body.url, req.body.rec],function (data) {
+        console.log(data);
+    })
+})
+
+<<<<<<< HEAD
 //6视频管理
 router.get('/tour/video', (req, res) => {
+=======
+//////////////6视频管理/////////////////////////////////////////
+router.get('/tour', (req, res) => {
+>>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
     res.sendFile(path.resolve('./views/admin/video.html'))
 })
 //7产品管理
@@ -105,7 +159,7 @@ router.post('/upload', upload.single('avatar'), (req, res) => {
                 callback(null)
             }
         ], function () {
-        console.log(req.file.originalname)
+            console.log(req.file.originalname)
             res.end(req.file.path + req.file.originalname);
         }
     )
