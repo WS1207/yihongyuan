@@ -1,4 +1,3 @@
-
 const mysql=require('mysql');
 const mysqlpool=mysql.createPool({
     host:'localhost',

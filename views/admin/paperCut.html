@@ -5,6 +5,9 @@
     <title>welcome</title>
     <link rel="stylesheet" href="/css/antd.min.css">
     <style>
+        .ant-card-bordered {
+            width:400px;
+        }
         #page {
             width: 1200px;
             height: auto;
@@ -16,7 +19,15 @@
             height: auto;
             margin: 0 auto;
         }
+.img{
+    width:100px;
+    height: 100px;
+    position: relative;
+    left: 90px;
+    bottom:100px;
+    z-index:1;
 
+}
         #admin .logo {
             width: 120px;
             height: 31px;
@@ -49,10 +60,12 @@
         }
 
         .bb {
-            width: 100%;
+            width: 270px;
             margin-bottom: 20px;
         }
-
+.ant-row{
+    margin-left: -10px;
+}
         .avatar-uploader,
         .avatar-uploader-trigger,
         .avatar {
@@ -67,8 +80,10 @@
             border-radius: 6px;
             cursor: pointer;
             position: relative;
-            left: 92px;
+            left: 90px;
             margin-top: 20px;
+            opacity: 0;
+            z-index: 2;
         }
 
         .avatar-uploader-trigger {
@@ -83,5 +98,6 @@
 <body>
 <div id="page"></div>
 </body>
+<script src="/js/fetch.js"></script>
 <script src="/js/paperCut.js"></script>
 </html>

@@ -21897,7 +21897,8 @@ module.exports = traverseAllChildren;
 /* 298 */,
 /* 299 */,
 /* 300 */,
-/* 301 */
+/* 301 */,
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22552,7 +22553,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 302 */,
 /* 303 */,
 /* 304 */,
 /* 305 */,
@@ -22742,7 +22742,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(15);
-var common = __webpack_require__(301);
+var common = __webpack_require__(302);
 
 var headerdata = [{ id: 1, title: '品牌介绍', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '晋韵文化', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '原生态泥人', img: '../public/images/st_niren.png', href: "#" }, { id: 1, title: '剪纸艺术', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '园林雕塑', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '旅游产品', img: '../public/images/st_navhover.png', href: "#" }, { id: 1, title: '联系我们', img: '../public/images/st_navhover.png', href: "#" }];
 
