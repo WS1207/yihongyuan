@@ -27,7 +27,6 @@ router.get('/clay',(req,res)=>{
 router.get('/papercut',(req,res)=>{
     res.sendFile(path.resolve('./views/index/papercut.html'))
 });
-
 //雕塑
 router.get('/sculpture',(req,res)=>{
     res.sendFile(path.resolve('./views/index/sculpture.html'))
