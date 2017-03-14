@@ -22,12 +22,11 @@ class WangEditor extends React.Component {
     render() {
         return (
             <div>
-                <div ref={(el)=>{this.e=el}} style={{height:500}}></div>
-                <div onClick={()=>{this.props.save(this.editor.$txt.html())}}>
-                    点击获取内容
-                </div>
+                <div ref={(el)=>{this.e=el}} style={{minHeight:200}}></div>
+                <button onClick={()=>{this.props.save(this.editor.$txt.html())}}>
+                    浏览内容
+                </button>
             </div>
-
         )
     }
 }

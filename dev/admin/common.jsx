@@ -70,7 +70,6 @@ class AppNav extends React.Component {
                                     title={<span><Icon type="user"/><span className="nav-text"><a href=""></a>管理员</span></span>}
                                 >
                                     <Menu.Item key="admin/manage/message"><a href="/admin/manage/message">管理员信息</a></Menu.Item>
-                                    <Menu.Item key="admin/manage/password"><a href="/admin/manage/password">修改密码</a></Menu.Item>
                                 </SubMenu>
 
                                 <SubMenu

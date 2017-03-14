@@ -4,10 +4,7 @@
   if (self.fetch) {
     return
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 629398b2e31a59908d1ed6f9c2a8055c1201e919
   var support = {
     searchParams: 'URLSearchParams' in self,
     iterable: 'Symbol' in self && 'iterator' in Symbol,

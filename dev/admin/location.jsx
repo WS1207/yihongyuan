@@ -1,157 +1,162 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
+const path = require('path');
 const nav = require('./common.jsx');
-import {Layout, Icon, Dropdown, Input, Row, Col, Progress, Button, notification} from 'antd';
-const {Header, Content, Footer, Sider} = Layout;
-class You extends React.Component {
-    constructor(props) {
+import { Menu, Icon, Button, Card, Row, Input, Table, Popconfirm} from 'antd';
+const {SubMenu} = Menu;
+class EditableCell extends React.Component {
+    constructor(props){
         super(props);
         this.state = {
-            you: '',
+            value: this.props.value,
+            editable: false
         };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-        this.emitEmpty = this.emitEmpty.bind(this)
-
+        this.handleChange=this.handleChange.bind(this);
+        this.check=this.check.bind(this);
+        this.edit=this.edit.bind(this);
     }
-
-    emitEmpty() {
-        this.userNameInput.focus();
-        this.setState({you: ''});
+    handleChange(e) {
+        const value = e.target.value;
+        this.setState({ value });
     }
-
-    onChangeUserName(e) {
-        this.setState({you: e.target.value});
-    }
-
-    render() {
-        const {you} = this.state;
-        const suffix = you ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                placeholder="Enter your Email"
-                prefix={<Icon type="mail"/>}
-                suffix={suffix}
-                value={you}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-class Phone extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            phone: '',
-        };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-        this.emitEmpty = this.emitEmpty.bind(this)
-
-    }
-
-    emitEmpty() {
-        this.userNameInput.focus();
-        this.setState({phone: ''});
-    }
-
-    onChangeUserName(e) {
-        this.setState({phone: e.target.value});
-    }
-
-    render() {
-        const {phone} = this.state;
-        const suffix = phone ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                placeholder="Enter your Phone"
-                prefix={<Icon type="phone"/>}
-                suffix={suffix}
-                value={phone}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-class Qu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            qu: '',
-        };
-        this.onChangeUserName = this.onChangeUserName.bind(this)
-
-    }
-
-    onChangeUserName(e) {
-        this.setState({qu: e.target.value});
-    }
-
-    render() {
-        const {qu} = this.state;
-        const suffix = qu ? <Icon type="close-circle" onClick={this.emitEmpty}/> : null;
-        return (
-            <Input
-                style={{marginTop: "20px"}}
-                type="textarea"
-                placeholder="地址"
-                suffix={suffix}
-                value={qu}
-                onChange={this.onChangeUserName}
-                ref={node => this.userNameInput = node}
-            />
-        );
-    }
-}
-
-
-const openNotificationWithIcon = (type) => {
-    notification.config({
-        placement: 'topRight',
-        top: 50,
-        duration: 0,
-    });
-    notification[type]({
-        description: '成功',
-    });
-
-};
-
-class Liu extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: 1
+    check(){
+        this.setState({ editable: false });
+        if (this.props.onChange) {
+            this.props.onChange(this.state.value);
         }
     }
-
+    edit(){
+        this.setState({ editable: true });
+    }
     render() {
+        const { value, editable } = this.state;
         return (
-            <div style={{width: 840}}>
-                <Progress percent={50} status="active" style={{margin: "20px 0"}}/>
-                <Row gutter={24}>
-                    <Col span={12}>
-                        <Row gutter={3}>
-                            <Col span={12}><Phone /></Col>
-                            <Col span={12}><You /></Col>
-                        </Row>
-                        <Row gutter={3}>
-                            <Col span={24}><Qu /></Col>
-                        </Row>
-                        <Button onClick={() => openNotificationWithIcon('success')} type="primary"
-                                style={{margin: "20px 140px "}}>删除</Button>
-                    </Col>
-
-                </Row>
-
+            <div className="editable-cell">
+                {
+                    editable ?
+                        <div className="editable-cell-input-wrapper">
+                            <Input
+                                value={value}
+                                onChange={this.handleChange}
+                                onPressEnter={this.check}
+                            />
+                            <Icon
+                                type="check"
+                                className="editable-cell-icon-check"
+                                onClick={this.check}
+                            />
+                        </div>
+                        :
+                        <div className="editable-cell-text-wrapper">
+                            {value || ' '}
+                            <Icon
+                                type="edit"
+                                className="editable-cell-icon"
+                                onClick={this.edit}
+                            />
+                        </div>
+                }
             </div>
-        )
+        );
+    }
+}
+class EditableTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.columns = [{
+            title: '电话',
+            dataIndex: 'phone',
+            width: '25%',
+            render: (text, record, index) => (
+                <EditableCell
+                    value={text}
+                    onChange={this.onCellChange(index, 'phone')}
+                />
+            ),
+        }, {
+            title: '邮箱',
+            dataIndex: 'email',
+            width: '25%',
+            render: (text, record, index) => (
+                <EditableCell
+                    value={text}
+                    onChange={this.onCellChange(index, 'email')}
+                />
+            ),
+        }, {
+            title: '地址',
+            dataIndex: 'add',
+            width: '40%',
+            render: (text, record, index) => (
+                <EditableCell
+                    value={text}
+                    onChange={this.onCellChange(index, 'add')}
+                />
+            ),
+        }];
+        this.state = {
+            dataSource: [{
+                key: '',
+                phone: '',
+                email: '',
+                add: ''
+            }],
+            count: 0,
+        };
+        this.onCellChange=this.onCellChange.bind(this);
+        this.onDelete=this.onDelete.bind(this);
+    }
+    onCellChange(index, key) {
+        return (value) => {
+            const dataSource = [...this.state.dataSource];
+            dataSource[index][key] = value;
+            this.setState({dataSource});
+            const dataSources=dataSource[index];
+            console.log(dataSources);
+            fetch('/admin/contact/update', {
+                    method: 'POST',
+                    // 让session生效
+                    credentials: 'same-origin',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(dataSources)
+                }
+            ).then((res)=>res.json()).then((data)=>{
+                if(data=='ok'){
+                    console.log('修改成功！');
+                }
+            })
+        }
+    }
+    onDelete(index){
+        const dataSource = [...this.state.dataSource];
+        dataSource.splice(index, 1);
+        this.setState({ dataSource });
+    }
+    componentDidMount() {
+        fetch('/admin/contact/all', {
+            credentials: 'same-origin'
+        }).then((res)=>res.json()).then((data)=> {
+            console.log(data)
+            this.setState({
+                dataSource: data,
+                count:`${data.length}`
+            });
+        });
+    }
+    render() {
+        const { dataSource } = this.state;
+        const columns = this.columns;
+        return (
+            <div>
+                <Table bordered dataSource={dataSource} columns={columns}/>
+            </div>
+        );
     }
 }
 ReactDOM.render(
     <nav.AppNav>
-        <div className="des">
-            <Liu/>
-        </div>
+        <EditableTable />
     </nav.AppNav>
     , document.querySelector('#page'));

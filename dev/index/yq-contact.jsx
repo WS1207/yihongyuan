@@ -5,7 +5,6 @@ class Xiang extends React.Component {
     constructor(props){
         super(props);
         this.submit=this.submit.bind(this);
-        this.reset=this.reset.bind(this);
     }
     submit(e){
         e.preventDefault();

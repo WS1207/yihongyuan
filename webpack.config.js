@@ -5,7 +5,6 @@ module.exports = {
         login: path.resolve('./dev/login.jsx'),
         common: path.resolve('./dev/admin/common.jsx'),
         welcome: path.resolve('./dev/admin/welcome.jsx'),
-        password: path.resolve('./dev/admin/password.jsx'),
         manage: path.resolve('./dev/admin/manage.jsx'),
         heading: path.resolve('./dev/admin/heading.jsx'),
         essay: path.resolve('./dev/admin/essay.jsx'),
