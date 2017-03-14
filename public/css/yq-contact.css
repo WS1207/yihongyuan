@@ -245,6 +245,7 @@
   border-radius: 10px;
   padding-left: 50px;
   border: 2px solid #cdcdcd;
+  outline:none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003214}}
 .my_xiangbox .xia .zuo img {
@@ -269,6 +270,7 @@
   border-radius: 10px;
   padding-left: 50px;
   border: 2px solid #cdcdcd;
+  outline:none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003235}}
 .my_xiangbox .xia .zhong img {
@@ -294,6 +296,7 @@
   border-radius: 10px;
   padding-left: 50px;
   border: 2px solid #cdcdcd;
+  outline:none;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003257}}
 .my_xiangbox .xia .you img {
@@ -317,6 +320,10 @@
   height: 225px;
   border: 2px solid #cdcdcd;
   border-radius: 10px;
+  resize:none;
+  outline:none;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/\%D2\%A6\%E7\%F9\/Desktop\/yaoqi\/www\/public\/css\/yq-contact\.scss}line{font-family:\00003277}}
 .my_xiangbox .xia .zhongxia h1 {

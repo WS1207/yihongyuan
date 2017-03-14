@@ -1,16 +1,28 @@
 const React = require("react")
 const ReactDOM = require("react-dom");
-
 const common=require("./common.jsx");
-// class Map extends React.Component{
-//     render(){
-//         return(
-//
-//         )
-//     }
-// }
-
 class Xiang extends React.Component {
+    constructor(props){
+        super(props);
+        this.submit=this.submit.bind(this);
+        this.reset=this.reset.bind(this);
+    }
+    submit(e){
+        e.preventDefault();
+        var data = {name: this.name.value, phone: this.phone.value, email: this.email.value, content: this.message.value};
+        fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify(data)
+        }).then((res)=>res.json()).then((data)=> {
+            if (data !== 'err') {
+                alert('发送成功');
+            }
+        })
+    }
     render() {
         return (
             <div>
@@ -49,30 +61,28 @@ class Xiang extends React.Component {
                             <h1>还差什么，请告诉我，我会尽力好您需要的一切</h1>
                         </div>
                     </div>
-                    <div className="xia">
-                        <div className="zuo">
-                            <input type="text" placeholder="NAME"/>
-                            <img src="/images/contact/my_xiang_0080.png" alt="" />
+                    <form action="" method="post">
+                        <div className="xia">
+                            <div className="zuo">
+                                <input type="text" ref={(el)=>{this.name=el}} placeholder="NAME" name="name"/>
+                                <img src="/images/contact/my_xiang_0080.png" alt="" />
+                            </div>
+                            <div className="zhong">
+                                <input type="text" ref={(el)=>{this.phone=el}} placeholder="PHONE" name="phone"/>
+                                <img src="/images/contact/my_xiang_0080.png" alt=""/>
+                            </div>
+                            <div className="you">
+                                <input type="text" placeholder="EMAIL" ref={(el)=>{this.email=el}} name="email"/>
+                                <img src="/images/contact/my_xiang_0080.png" alt=""/>
+                            </div>
+                            <div className="zhongxia">
+                                <textarea defaultValue="请输入内容。。。" ref={(el)=>{this.message=el}} name="message"></textarea>
+                            </div>
+                            <div className="fa"  onClick={this.submit}>
+                                <a href="javascript:;" >发送</a>
+                            </div>
                         </div>
-                        <div className="zhong">
-                            <input type="text" placeholder="PHONE"/>
-                            <img src="/images/contact/my_xiang_0080.png" alt=""/>
-                        </div>
-                        <div className="you">
-                            <input type="text" placeholder="EMAIL"/>
-                            <img src="/images/contact/my_xiang_0080.png" alt=""/>
-                        </div>
-                        <div className="zhongxia">
-                            <textarea></textarea>
-                            <h1>LEAVE A MESSAGE……</h1>
-                        </div>
-                        <div className="fa">
-                            <a href="javascript:">发送</a>
-                        </div>
-                        <div className="chong">
-                            <a href="javascript:">重置</a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         )

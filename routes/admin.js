@@ -16,11 +16,7 @@ const mysql = require('../mysql');
 //     console.log(data)
 // })
 //async   异步编程
-// const multer = require('multer')
-// const upload = multer({dest: 'uploads/'})
-// const fs = require('fs')
-// const async = require('async')
-// const mysql = require('../mysql');
+
 
 //1欢迎页
 router.get('/', (req, res) => {

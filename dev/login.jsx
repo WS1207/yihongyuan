@@ -42,7 +42,6 @@ class NormalLoginForm extends React.Component {
             }
         });
     }
-
     render() {
         const {getFieldDecorator} = this.props.form;
         return (
@@ -77,7 +76,6 @@ class NormalLoginForm extends React.Component {
         );
     }
 }
-
 const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 class Page extends React.Component {
     render() {

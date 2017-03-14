@@ -22792,28 +22792,46 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = __webpack_require__(4);
 var ReactDOM = __webpack_require__(15);
-
 var common = __webpack_require__(346);
-// class Map extends React.Component{
-//     render(){
-//         return(
-//
-//         )
-//     }
-// }
 
 var Xiang = function (_React$Component) {
     _inherits(Xiang, _React$Component);
 
-    function Xiang() {
+    function Xiang(props) {
         _classCallCheck(this, Xiang);
 
-        return _possibleConstructorReturn(this, (Xiang.__proto__ || Object.getPrototypeOf(Xiang)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Xiang.__proto__ || Object.getPrototypeOf(Xiang)).call(this, props));
+
+        _this.submit = _this.submit.bind(_this);
+        _this.reset = _this.reset.bind(_this);
+        return _this;
     }
 
     _createClass(Xiang, [{
+        key: "submit",
+        value: function submit(e) {
+            e.preventDefault();
+            var data = { name: this.name.value, phone: this.phone.value, email: this.email.value, content: this.message.value };
+            fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'same-origin',
+                body: JSON.stringify(data)
+            }).then(function (res) {
+                return res.json();
+            }).then(function (data) {
+                if (data !== 'err') {
+                    alert('发送成功');
+                }
+            });
+        }
+    }, {
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             return React.createElement(
                 "div",
                 null,
@@ -22919,52 +22937,50 @@ var Xiang = function (_React$Component) {
                         )
                     ),
                     React.createElement(
-                        "div",
-                        { className: "xia" },
+                        "form",
+                        { action: "", method: "post" },
                         React.createElement(
                             "div",
-                            { className: "zuo" },
-                            React.createElement("input", { type: "text", placeholder: "NAME" }),
-                            React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "zhong" },
-                            React.createElement("input", { type: "text", placeholder: "PHONE" }),
-                            React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "you" },
-                            React.createElement("input", { type: "text", placeholder: "EMAIL" }),
-                            React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "zhongxia" },
-                            React.createElement("textarea", null),
+                            { className: "xia" },
                             React.createElement(
-                                "h1",
-                                null,
-                                "LEAVE A MESSAGE\u2026\u2026"
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "fa" },
+                                "div",
+                                { className: "zuo" },
+                                React.createElement("input", { type: "text", ref: function ref(el) {
+                                        _this2.name = el;
+                                    }, placeholder: "NAME", name: "name" }),
+                                React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
+                            ),
                             React.createElement(
-                                "a",
-                                { href: "javascript:" },
-                                "\u53D1\u9001"
-                            )
-                        ),
-                        React.createElement(
-                            "div",
-                            { className: "chong" },
+                                "div",
+                                { className: "zhong" },
+                                React.createElement("input", { type: "text", ref: function ref(el) {
+                                        _this2.phone = el;
+                                    }, placeholder: "PHONE", name: "phone" }),
+                                React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
+                            ),
                             React.createElement(
-                                "a",
-                                { href: "javascript:" },
-                                "\u91CD\u7F6E"
+                                "div",
+                                { className: "you" },
+                                React.createElement("input", { type: "text", placeholder: "EMAIL", ref: function ref(el) {
+                                        _this2.email = el;
+                                    }, name: "email" }),
+                                React.createElement("img", { src: "/images/contact/my_xiang_0080.png", alt: "" })
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "zhongxia" },
+                                React.createElement("textarea", { defaultValue: "\u8BF7\u8F93\u5165\u5185\u5BB9\u3002\u3002\u3002", ref: function ref(el) {
+                                        _this2.message = el;
+                                    }, name: "message" })
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "fa", onClick: this.submit },
+                                React.createElement(
+                                    "a",
+                                    { href: "javascript:;" },
+                                    "\u53D1\u9001"
+                                )
                             )
                         )
                     )

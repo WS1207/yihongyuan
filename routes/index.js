@@ -1,10 +1,7 @@
-/**
- * Created by Administrator on 2017/3/1.
- */
 const express = require('express');
 const router = express.Router();
 const path=require('path');
-
+const mysql = require('../mysql');
 
 //首页
 router.get('/',(req,res)=>{
@@ -40,10 +37,14 @@ router.get('/sculpture',(req,res)=>{
 router.get('/tour',(req,res)=>{
     res.sendFile(path.resolve('./views/index/tour.html'))
 });
-
 //联系我们
 router.get('/contact',(req,res)=>{
     res.sendFile(path.resolve('./views/index/contact.html'))
 });
-
+router.post('/contact', (req, res)=> {
+    mysql.query('insert into message (name,phone,email,content) values(?,?,?,?)',
+        [req.body.name, req.body.phone, req.body.email,req.body.content], (data)=> {
+                res.json(data.insertId);
+        });
+});
 module.exports=router;
